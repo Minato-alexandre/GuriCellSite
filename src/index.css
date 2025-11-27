@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --swiper-theme-color: #4F46E5; /* Azul/Roxo (Modo Claro) */
+    --swiper-navigation-size: 30px; /* Tamanho das setinhas (opcional) */
+}
+
+.dark {
+    --swiper-theme-color: #FACC15; /* Amarelo (Modo Escuro) */
+}
+
+/* Ajuste opcional para as bolinhas de paginação não ficarem coladas */
+.swiper-pagination-bullet {
+    opacity: 0.5;
+    background: var(--swiper-theme-color);
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
