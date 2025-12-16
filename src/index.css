@@ -1,4 +1,4 @@
-@tailwind base;
+Ôªø@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -11,7 +11,7 @@
     --swiper-theme-color: #FACC15; /* Amarelo (Modo Escuro) */
 }
 
-/* Ajuste opcional para as bolinhas de paginaÁ„o n„o ficarem coladas */
+/* Ajuste opcional para as bolinhas de pagina√ß√£o n√£o ficarem coladas */
 .swiper-pagination-bullet {
     opacity: 0.5;
     background: var(--swiper-theme-color);
@@ -19,4 +19,39 @@
 
 .swiper-pagination-bullet-active {
     opacity: 1;
+}
+
+@layer utilities {
+    /* Chrome, Edge, Safari */
+    ::-webkit-scrollbar {
+        width: 8px; /* Largura vertical */
+        height: 8px; /* Altura horizontal */
+    }
+
+    /* O fundo da barra */
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* A parte que a gente arrasta (Thumb) */
+    ::-webkit-scrollbar-thumb {
+        background-color: #9ca3af; /* Cinza m√©dio */
+        border-radius: 20px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+    }
+
+        /* Quando passa o mouse na barra */
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #eab308; /* Amarelo escuro */
+        }
+
+    /* MODO ESCURO */
+    .dark ::-webkit-scrollbar-thumb {
+        background-color: #333; /* Cinza escuro */
+    }
+
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background-color: #F4ff00; /* Amarelo GuriCell Neon */
+        }
 }
